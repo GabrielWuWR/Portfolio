@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    --backgroundPrimario: #fff;
+    --backgroundSecundario: #f4f4f4;
+    --corTexto: #222;
+    --corTextoAuxiliar: #585858;
+    --corAuxiliar: #FF2449;
+    --corSombra: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--backgroundPrimario);
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    background-color: var(--backgroundPrimario);
+    box-shadow: 0 1px 2px var(--corSombra);
+    padding: 5px 20px 5px 22px;
+    color: var(--corTexto);
+    height: 50px;
+    z-index: 100;
+    position: relative;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+
+.cabecalho img {
+    max-height: 100%;
+    width: auto;
+}
+
+.logo {
+    height: 50px;
+    padding: 5px 0px;
+}
+
+.cabecalho input {
+    width: 50vh;
+    height: 30px;
+    border-radius: 5px;
+    border-style: hidden;
+    padding: 5px 40px 5px 15px;
+    background-color: var(--backgroundSecundario);
+    font-size: 18px;
+}
+
+.cabecalho input:focus {
+    outline: 1px solid var(--corTexto);
+}
+
+.cabecalho input:not(:placeholder-shown)+i {
+    color: var(--corAuxiliar);
+}
+
+.campoPesquisa {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+.campoPesquisa i {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 40px;
+}
+
+.campoPesquisa i:hover {
+    cursor: pointer;
+}
+
+.menuLista {
+    display: flex;
+    list-style: none;
+    font-weight: bolder;
+    gap: 2vh;
+}
+
+.menuLista li {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 4px solid transparent;
+    transition: .2s;
+    color: var(--corTexto);
+}
+
+.menuLista li:hover {
+    border-bottom: 4px solid var(--corAuxiliar);
+    cursor: pointer;
+}
+
+.menuPrincipal {
+    display: flex;
+    width: 100%;
+}
+
+.menu {
+    width: 350px;
+    height: calc(100vh - 50px);
+    background-color: var(--backgroundSecundario);
+}
+
+.fa-github {
+    color: #181717;
+}
+
+.fa-linkedin {
+    color: #0077B5;
+}
+
+.btns_lista_menu {
+    display: flex;
+    width: 120vh;
+    height: 50px;
+    display: flex;
+    gap: 10vh;
+    align-items: center;
+    padding: 5px 20px 5px 22px;
+}
+
+.btns_menu {
+    display: flex;
+    gap: 2vh;
+
+}
+
+.btns_menu button {
+    background-color: var(--backgroundPrimario);
+    border: 2px solid var(--corSombra);
+    border-radius: 5px;
+    width: 12vh;
+    font-weight: bolder;
+    height: 35px;
+    font-size: 15px;
+    transition: .2s;
+}
+
+.btns_menu button:hover {
+    cursor: pointer;
+    color: var(--corAuxiliar);
+}
+
+.cumprimentos {
+    height: 70px;
+    background-color: var(--backgroundSecundario);
+    font-size: 10px;
+    width: 100%;
+    padding: 5px 20px 5px 22px;
+    display: flex;
+
+    color: var(--corTexto);
+}
+
+.fraseBoasVindas {
+    border-right: 3px solid var(--corAuxiliar);
+    height: 100%;
+    padding-right: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fraseRandom {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1vh;
+    width: 55vh;
+    justify-content: center;
+}
+
+.animeName {
+    color: var(--corTextoAuxiliar);
+}
+
+.autor {
+    font-style: italic;
+}
+
+.creditos {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vh;
+    font-size: .6rem;
+    width: 100%;
+    align-items: flex-start;
+}
