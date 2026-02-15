@@ -3335,11 +3335,6 @@ export const frases = [
         "quote": "When you are down, how do you pick yourself up? People fall into two categories... depending on how they pick themselves up. The first one sees somebody who is worse off and thinks, \"Hey! I am better off than that guy.\" And the second kind of guy sees a challenge and tries to raise himself to it."
     },
     {
-        "anime": "Azumanga Daioh",
-        "character": "Ayumu Kasuga",
-        "quote": "You have a swimsuit tan. You could jump in the pool naked and no one would know you weren't wearing anything."
-    },
-    {
         "anime": "Trigun",
         "character": "Vash the Stampede",
         "quote": "Doesn't seem to matter how far I travel, my destiny is always followed by blood and gunsmoke. The result is always the same every time, mountains of death and debris."
@@ -9403,11 +9398,6 @@ export const frases = [
         "anime": "Rainbow: Nisha Rokubou no Shichinin",
         "character": "Rainbow: Nisha Rokubou no Shichinin",
         "quote": "Bruises and fractures heal with time, but the wounds in people's hearts do not heal as easily."
-    },
-    {
-        "anime": "Azumanga Daioh",
-        "character": "Ayumu Kasuga",
-        "quote": "You have a swimsuit tan. You could jump in the pool naked and no one would know you weren't wearing anything."
     },
     {
         "anime": "Hunter X Hunter",

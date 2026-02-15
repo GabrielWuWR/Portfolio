@@ -8,6 +8,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
     </style>
     <script src="https://kit.fontawesome.com/546bb97bde.js" crossorigin="anonymous"></script>
+    <script defer type="module" src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 </head>
@@ -35,25 +36,71 @@
         </div>
     </header>
     <main>
-        <div class="menuPrincipal">
-            <aside class="menu">
+        <aside class="menu">
 
-            </aside>
-            <div class="cumprimentos">
-                <h1 class="fraseBoasVindas">Olá seja bem vindo!</h1>
-                <div class="fraseRandom">
-                    <h2 id="frase"></h2>
-                    <div class="creditos">
-                        <h2 id="animeName" class="animeName"></h2>
-                        <h2 id="autor" class="autor"></h2>
+        </aside>
+        <div class="menuPrincipal">
+            <div class="cabecalhos">
+                <div class="cumprimentos">
+                    <h1 class="fraseBoasVindas">Olá seja bem vindo!</h1>
+                    <div class="fraseRandom">
+                        <h2 id="frase"></h2>
+                        <div class="creditos">
+                            <h2 id="animeName" class="animeName"></h2>
+                            <h2 id="autor" class="autor"></h2>
+                        </div>
                     </div>
+                </div>
+
+                <div class="carrosel">
+                    <header class="cabecalhoCarrosel">
+                        <button class="btn_carrosel"><i class="fa-brands fa-github"></i> GitHub</button>
+                        <p>Gostou do projeto <span>PROJETO_NOME</span>? deixe uma estrela no GitHub!</p>
+                    </header>
+
+                    <div class="conteudoPrincipalCarrosel">
+                        <p class="setaBtn"><i class="fa-regular fa-circle-left"></i></p>
+                        <div class="itensCarrosel">
+                        
+                            <div class="itemCarroselContainer">
+                                <div class="cardImgPrincipal">
+                                    <img class="imagemCarroselPrincipal" src="img/template.jpg" alt="">
+                                    <p>Interessante não é?</p>
+                                </div>
+                                <button class="fecharBtn"><i class="fa-solid fa-x"></i></button>
+                                <a class="verProjeto" href="#">
+                                    <div class="projetoInformacoes">
+                                        <div class="projetoDados">
+                                                <h1>Projeto nome</h1>
+                                            <p>Projeto descrição</p>
+                                        </div>
+                        
+                                        <div class="imgsProjetoCarrosel">
+                                            <img src="img/template2.jpg" alt="">
+                                            <img src="img/template3.jpg" alt="">
+                                            <img src="img/template4.jpg" alt="">
+                                        </div>
+                                        <div class="tagsCarrosselContainer">
+                                            <p class="tagCarrosel">HTML</p>
+                                            <p class="tagCarrosel"> CSS</p>
+                                            <p class="tagCarrosel">JS</p>
+                                            <p class="tagCarrosel">NodeJs</p>
+                                        </div>
+                                        <button class="btnVerProjeto">Ver página <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="setaBtn"><i class="fa-regular fa-circle-right"></i></p>
+                    </div>
+
+                </div>
+
+                <div class="projetosDestaquesContainer">
+                    <p>Projetos em destaque</p>
                 </div>
             </div>
         </div>
     </main>
-
-
-    <script type="module" src="script.js"></script>
 </body>
-
 </html>

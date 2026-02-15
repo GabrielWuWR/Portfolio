@@ -1,18 +1,24 @@
+
+:root {
+    --fontePrimaria: "Lato", sans-serif;
+    --backgroundPrimario: #fff;
+    --backgroundSecundario: #f4f4f4;
+    --backgroundTerciario: #495867;
+    --backgroundQuarto: #141414;
+    --corTexto: #222;
+    --corTextoAuxiliar: #585858;
+    --corAuxiliar: #FF2449;
+    --corAuxiliarTres: #8866ae;
+    --corSombra: rgba(0, 0, 0, 0.1);
+    --corBorda: rgba(255,255,255,0.6);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lato", sans-serif;
+    font-family: var(--fontePrimaria);
     text-decoration: none;
-}
-
-:root {
-    --backgroundPrimario: #fff;
-    --backgroundSecundario: #f4f4f4;
-    --corTexto: #222;
-    --corTextoAuxiliar: #585858;
-    --corAuxiliar: #FF2449;
-    --corSombra: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -104,7 +110,7 @@ body {
     cursor: pointer;
 }
 
-.menuPrincipal {
+main {
     display: flex;
     width: 100%;
 }
@@ -113,6 +119,13 @@ body {
     width: 350px;
     height: calc(100vh - 50px);
     background-color: var(--backgroundSecundario);
+    flex-shrink: 0;
+}
+
+.menuPrincipal {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .fa-github {
@@ -127,7 +140,6 @@ body {
     display: flex;
     width: 120vh;
     height: 50px;
-    display: flex;
     gap: 10vh;
     align-items: center;
     padding: 5px 20px 5px 22px;
@@ -153,6 +165,10 @@ body {
 .btns_menu button:hover {
     cursor: pointer;
     color: var(--corAuxiliar);
+}
+
+.cabecalhos {
+    width: 100%;
 }
 
 .cumprimentos {
@@ -183,10 +199,6 @@ body {
     justify-content: center;
 }
 
-.animeName {
-    color: var(--corTextoAuxiliar);
-}
-
 .autor {
     font-style: italic;
 }
@@ -198,4 +210,219 @@ body {
     font-size: .6rem;
     width: 100%;
     align-items: flex-start;
+    color: var(--corTextoAuxiliar);
+}
+
+.carrosel {
+    background-color: var(--corTexto);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carrosel:hover .setaBtn {
+    opacity: 1;
+}
+
+.cabecalhoCarrosel {
+    height: 75px;
+    width: 100%;
+    background-color: var(--backgroundTerciario);
+    background-image: linear-gradient(to right, var(--backgroundTerciario) 60%, var(--corAuxiliarTres));
+    display: flex;
+    align-items: center;
+    padding: 5px 20px 5px 42px;
+    gap: 20px;
+    color: var(--backgroundSecundario);
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.btn_carrosel {
+    border: 2px solid var(--corBorda);
+    background-color: transparent;
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+    color: var(--backgroundSecundario);
+    transition: .2s;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_carrosel .fa-github {
+    color: var(--backgroundSecundario);
+}
+
+.btn_carrosel:hover {
+    background-color: var(--corAuxiliar);
+    border-color: var(--corAuxiliar);
+    cursor: pointer;
+}
+
+.conteudoPrincipalCarrosel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.setaBtn {
+    color: var(--backgroundPrimario);
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0; 
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.setaBtn:hover {
+    color: var(--backgroundSecundario);
+}
+
+.itensCarrosel {
+    width: 80%;
+    height: 100%;
+    background-color: var(--backgroundQuarto);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.itensCarrosel::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    backdrop-filter: blur(100px);
+    background-color: rgba(73, 73, 73, 0);
+}
+
+.itemCarroselContainer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.imagemCarroselPrincipal {
+    width: 40vh;
+    height: 25vh;
+}
+
+.cardImgPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+
+}
+
+.cardImgPrincipal img {
+    border-radius: 5px;
+}
+
+.cardImgPrincipal p {
+    color: var(--backgroundPrimario);
+    font-size: 17px;
+}
+
+.imgsProjetoCarrosel {
+    display: flex;
+    gap: 1vh;
+}
+
+.imgsProjetoCarrosel img {
+    width: 23vh;
+    height: 16vh;
+    border-radius: 5px;
+}
+
+.projetoInformacoes {
+    color: var(--backgroundSecundario);
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.projetoDados {
+    width: 50vh;
+    flex-wrap: wrap;
+}
+
+.tagsCarrosselContainer {
+    display: flex;
+    gap: 1.5vh;
+    color: var(--backgroundQuarto);
+    width: 50vh;
+    flex-wrap: wrap;
+}
+
+.tagsCarrosselContainer p {
+    background-color: var(--backgroundPrimario);
+    padding: 3px 7px;
+    min-width: 50px; 
+    font-size: 11px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; 
+}
+
+.btnVerProjeto {
+    border: 2px solid var(--corBorda);
+    background-color: transparent;
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+    color: var(--backgroundSecundario);
+    transition: .2s;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnVerProjeto i {
+    margin-top: 3px;
+}
+
+.verProjeto:hover .btnVerProjeto {
+    background-color: var(--backgroundPrimario);
+    border-color: var(--backgroundPrimario);
+    color: var(--corTexto);
+    cursor: pointer;
+}
+
+.fecharBtn {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    border: 2px solid var(--corBorda);
+    background-color: transparent;
+    width: 35px;
+    height: 35px;
+    border-radius: 3px;
+    color: var(--backgroundSecundario);
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.fecharBtn:hover {
+    cursor: pointer;
 }
