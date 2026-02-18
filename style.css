@@ -1,4 +1,3 @@
-
 :root {
     --fontePrimaria: "Lato", sans-serif;
     --backgroundPrimario: #fff;
@@ -10,7 +9,8 @@
     --corAuxiliar: #FF2449;
     --corAuxiliarTres: #8866ae;
     --corSombra: rgba(0, 0, 0, 0.1);
-    --corBorda: rgba(255,255,255,0.6);
+    --corBorda: rgba(255, 255, 255, 0.6);
+    --corBordaAuxiliar: #cdcdcd;
 }
 
 * {
@@ -126,6 +126,7 @@ main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .fa-github {
@@ -279,7 +280,7 @@ main {
     color: var(--backgroundPrimario);
     font-size: 2rem;
     cursor: pointer;
-    opacity: 0; 
+    opacity: 0;
     transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
@@ -299,7 +300,10 @@ main {
 .itensCarrosel::after {
     content: "";
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     backdrop-filter: blur(100px);
     background-color: rgba(73, 73, 73, 0);
 }
@@ -372,13 +376,13 @@ main {
 .tagsCarrosselContainer p {
     background-color: var(--backgroundPrimario);
     padding: 3px 7px;
-    min-width: 50px; 
+    min-width: 50px;
     font-size: 11px;
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 
 .btnVerProjeto {
@@ -424,5 +428,120 @@ main {
 }
 
 .fecharBtn:hover {
+    cursor: pointer;
+}
+
+.projetosDestaquesContainer {
+    padding: 25px 90px 5px 90px;
+    font-size: 23px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 100%;
+    max-width: 100%;
+}
+
+.containerProjetosDestaques {
+    display: flex;
+    gap: 2vh;
+    align-items: center;
+}
+
+.btnProjetosDestacados {
+    border: 1px solid var(--corTexto);
+    background-color: transparent;
+    width: 35px;
+    height: 120px;
+    border-radius: 3px;
+    color: var(--corTexto);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnProjetosDestacados:hover {
+    cursor: pointer;
+}
+
+.projetosDestacados {
+    display: flex;
+    width: 100%; 
+    overflow-x: hidden; 
+    gap: 2vh;
+    align-items: center;
+    padding-bottom: 15px;
+
+}
+
+.containerItemDestaque {
+    border: 1px solid var(--corBordaAuxiliar);
+    box-shadow: 0 2px 4px var(--corSombra);
+    border-radius: 3px;
+    display: flex;
+    gap: 1.5vh;
+    padding: 15px 20px;
+    width: fit-content;
+    max-width: 50vh;
+}
+
+.itemDestaqueDados {
+    border-right: 1px solid var(--corBordaAuxiliar);
+    padding-right: 15px;
+    flex: 1;
+    white-space: normal;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    gap: .5vh;
+    justify-content: space-between;
+}
+
+.containerItemDestaque img {
+    width: 22vh;
+    height: 15vh;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.projetosDestaquesTitulo {
+    font-weight: bolder;
+}
+
+.itemDestaqueDadosNome {
+    color: var(--corAuxiliar);
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.itemDestaqueDadosDesc {
+    font-size: 15px;
+    color: var(--corTextoAuxiliar);
+}
+
+.btn_ProjetoDestaque {
+    border: 1px solid var(--corTexto);
+    background-color: transparent;
+    width: 100px;
+    height: 35px;
+    border-radius: 3px;
+    color: var(--corTexto);
+    transition: .2s;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerItemDestaque:hover .btn_ProjetoDestaque {
+    background-color: var(--corAuxiliar);
+    border-color: var(--corAuxiliar);
+    color: var(--backgroundPrimario);    
+}
+
+.containerItemDestaque:hover, .btn_ProjetoDestaque:hover {
     cursor: pointer;
 }

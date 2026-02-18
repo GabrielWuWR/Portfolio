@@ -47,8 +47,8 @@ async function escreverFraseAleatoria() {
     let letras = frases[numeroRandom].quote.length; //Salvando a quantidade de letras que a frase tem
     //let fraseTraduzida = await traduzirFrases(frases[numeroRandom].quote, 'en', 'pt'); //Aqui chamamos a função traduzir frases, é necessario sempre chamar o await pois se trata de uma resposta de api
 
-    //Se a frase tiver mais de 140 caracteres escolhemos outra, fazemos isso para evitar um bug visual
-    if (letras > 140) {
+    //Se a frase tiver mais de 130 caracteres escolhemos outra, fazemos isso para evitar um bug visual
+    if (letras > 130) {
         escreverFraseAleatoria();
     } else {
         //Caso a frase tenha uma quantidade legal de caracteres então usamos ela
