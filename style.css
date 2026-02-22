@@ -552,13 +552,12 @@ main {
 .projetosCategoriaContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 2vh;
+    gap: 15px;
 }
 
 .projetoCategoriaContainer {
     margin-top: 3vh;
-    width: fit-content;
-    max-width: 250px;
+    width: calc(16.666% - 12.5px);
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -576,17 +575,17 @@ main {
 
 .img-container {
     position: relative;
-    width: 25vh;
+    width: 230px;
     height: 18vh;
     border-radius: 2px;
 }
 
-.img-container img {
+.img-container img.img-estatica {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     border-radius: 3px;
 }
 
@@ -602,6 +601,30 @@ main {
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
+}
+
+.img-container img.img-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1;
+}
+
+.img-container:hover img.img-gif {
+    opacity: 1;
+    visibility: visible;
+}
+
+.img-container:hover img.img-estatica {
+    opacity: 0; 
 }
 
 .img-container:hover {
