@@ -59,4 +59,3 @@ async function escreverFraseAleatoria() {
 }
 
 escreverFraseAleatoria(); //Chamando a função para escrever uma frase aleatória
-

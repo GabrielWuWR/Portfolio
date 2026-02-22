@@ -7,10 +7,12 @@
     --corTexto: #222;
     --corTextoAuxiliar: #585858;
     --corAuxiliar: #FF2449;
+    --corAuxiliarEscura: #da2c49;
     --corAuxiliarTres: #8866ae;
     --corSombra: rgba(0, 0, 0, 0.1);
     --corBorda: rgba(255, 255, 255, 0.6);
     --corBordaAuxiliar: #cdcdcd;
+    --corFundoAuxiliar: rgba(39, 39, 39);
 }
 
 * {
@@ -35,9 +37,9 @@ body {
     color: var(--corTexto);
     height: 50px;
     z-index: 100;
-    position: relative;
     justify-content: space-between;
-    font-weight: bolder;
+    position: fixed;
+    width: 100%;
 }
 
 .cabecalho img {
@@ -57,7 +59,7 @@ body {
     border-style: hidden;
     padding: 5px 40px 5px 15px;
     background-color: var(--backgroundSecundario);
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .cabecalho input:focus {
@@ -92,7 +94,6 @@ body {
 .menuLista {
     display: flex;
     list-style: none;
-    font-weight: bolder;
     gap: 2vh;
 }
 
@@ -116,10 +117,12 @@ main {
 }
 
 .menu {
-    width: 350px;
+    width: 260px;
     height: calc(100vh - 50px);
     background-color: var(--backgroundSecundario);
     flex-shrink: 0;
+    margin-top: 50px;
+    position: fixed;
 }
 
 .menuPrincipal {
@@ -127,6 +130,8 @@ main {
     display: flex;
     flex-direction: column;
     min-width: 0;
+    margin-top: 50px;
+    margin-left: 260px;
 }
 
 .fa-github {
@@ -141,7 +146,7 @@ main {
     display: flex;
     width: 120vh;
     height: 50px;
-    gap: 10vh;
+    gap: 5vh;
     align-items: center;
     padding: 5px 20px 5px 22px;
 }
@@ -149,7 +154,6 @@ main {
 .btns_menu {
     display: flex;
     gap: 2vh;
-
 }
 
 .btns_menu button {
@@ -157,7 +161,6 @@ main {
     border: 2px solid var(--corSombra);
     border-radius: 5px;
     width: 12vh;
-    font-weight: bolder;
     height: 35px;
     font-size: 15px;
     transition: .2s;
@@ -222,10 +225,6 @@ main {
     align-items: center;
 }
 
-.carrosel:hover .setaBtn {
-    opacity: 1;
-}
-
 .cabecalhoCarrosel {
     height: 75px;
     width: 100%;
@@ -236,7 +235,6 @@ main {
     padding: 5px 20px 5px 42px;
     gap: 20px;
     color: var(--backgroundSecundario);
-    font-weight: bolder;
     font-size: 18px;
 }
 
@@ -249,7 +247,6 @@ main {
     color: var(--backgroundSecundario);
     transition: .2s;
     font-size: 16px;
-    font-weight: bold;
     display: flex;
     gap: 5px;
     align-items: center;
@@ -274,18 +271,6 @@ main {
     height: 100%;
     gap: 20px;
     padding: 0 20px;
-}
-
-.setaBtn {
-    color: var(--backgroundPrimario);
-    font-size: 2rem;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.2s ease;
-}
-
-.setaBtn:hover {
-    color: var(--backgroundSecundario);
 }
 
 .itensCarrosel {
@@ -354,7 +339,6 @@ main {
 
 .projetoInformacoes {
     color: var(--backgroundSecundario);
-    font-weight: bolder;
     display: flex;
     flex-direction: column;
     gap: 2vh;
@@ -394,7 +378,6 @@ main {
     color: var(--backgroundSecundario);
     transition: .2s;
     font-size: 16px;
-    font-weight: bold;
     display: flex;
     gap: 5px;
     align-items: center;
@@ -416,7 +399,7 @@ main {
     position: absolute;
     right: 30px;
     top: 20px;
-    border: 2px solid var(--corBorda);
+    border: 1px solid var(--corBorda);
     background-color: transparent;
     width: 35px;
     height: 35px;
@@ -432,9 +415,8 @@ main {
 }
 
 .projetosDestaquesContainer {
-    padding: 25px 90px 5px 90px;
+    padding: 25px 50px 5px 50px;
     font-size: 23px;
-    font-weight: bolder;
     display: flex;
     flex-direction: column;
     gap: 2vh;
@@ -449,26 +431,30 @@ main {
 }
 
 .btnProjetosDestacados {
-    border: 1px solid var(--corTexto);
+    border: 1px solid var(--corBordaAuxiliar);
     background-color: transparent;
     width: 35px;
     height: 120px;
     border-radius: 3px;
-    color: var(--corTexto);
+    color: var(--corTextoAuxiliar);
     font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.2s ease;
 }
 
 .btnProjetosDestacados:hover {
     cursor: pointer;
+    border-color: var(--corAuxiliar);
+    color: var(--backgroundPrimario);
+    background-color: var(--corAuxiliar);
 }
 
 .projetosDestacados {
     display: flex;
-    width: 100%; 
-    overflow-x: hidden; 
+    width: 100%;
+    overflow-x: hidden;
     gap: 2vh;
     align-items: center;
     padding-bottom: 15px;
@@ -505,14 +491,9 @@ main {
     flex-shrink: 0;
 }
 
-.projetosDestaquesTitulo {
-    font-weight: bolder;
-}
-
 .itemDestaqueDadosNome {
     color: var(--corAuxiliar);
     font-size: 18px;
-    font-weight: bolder;
 }
 
 .itemDestaqueDadosDesc {
@@ -529,7 +510,6 @@ main {
     color: var(--corTexto);
     transition: .2s;
     font-size: 13px;
-    font-weight: bold;
     display: flex;
     gap: 5px;
     align-items: center;
@@ -539,9 +519,237 @@ main {
 .containerItemDestaque:hover .btn_ProjetoDestaque {
     background-color: var(--corAuxiliar);
     border-color: var(--corAuxiliar);
-    color: var(--backgroundPrimario);    
+    color: var(--backgroundPrimario);
 }
 
-.containerItemDestaque:hover, .btn_ProjetoDestaque:hover {
+.containerItemDestaque:hover,
+.btn_ProjetoDestaque:hover {
+    cursor: pointer;
+}
+
+.categoriaContainer {
+    padding: 0px 50px;
+}
+
+.cabecalhoCategoriaProjeto {
+    margin-top: 2vh;
+    display: flex;
+    gap: 2vh;
+}
+
+.cabecalhoCategoriaProjeto button:hover {
+    background-color: var(--corAuxiliar);
+    border-color: var(--corAuxiliar);
+    cursor: pointer;
+    color: var(--backgroundPrimario);
+}
+
+.btn_containerCategoria {
+    color: var(--corAuxiliar);
+    border-color: var(--corAuxiliar);
+}
+
+.projetosCategoriaContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vh;
+}
+
+.projetoCategoriaContainer {
+    margin-top: 3vh;
+    width: fit-content;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    position: relative;
+}
+
+.projetoCategoriaTitulo {
+    color: var(--corTexto);
+    font-size: 15px;
+}
+
+.projetoCategoriaTitulo:hover {
+    text-decoration: underline;
+}
+
+.img-container {
+    position: relative;
+    width: 25vh;
+    height: 18vh;
+    border-radius: 2px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+    border-radius: 3px;
+}
+
+.img-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 50px 40px -20px var(--corSombra),
+        inset 0px -50px 40px -20px var(--corSombra);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.img-container:hover {
+    cursor: pointer;
+}
+
+.img-container:hover::after {
+    opacity: 1;
+}
+
+.projetoCategoriaTags {
+    display: flex;
+    font-size: 13px;
+    gap: 3px;
+}
+
+.projetoCategoriaTags a {
+    color: var(--corAuxiliar);
+}
+
+.projetoCategoriaTags a:hover {
+    color: var(--corAuxiliarEscura);
+}
+
+.projetoCategoriaDescricao {
+    font-size: 12px;
+    color: var(--corTextoAuxiliar);
+}
+
+.balaoInformacoesContainer {
+    border: 3px solid var(--backgroundQuarto);
+    outline: 3px solid var(--backgroundPrimario);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: var(--corFundoAuxiliar);
+    padding: 5px 6px;
+    color: var(--backgroundPrimario);
+    width: 25vh;
+    position: absolute;
+    z-index: 999;
+    left: auto;
+    right: calc(100% + 5px);
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 
+        opacity 0.3s ease 0.5s, 
+        visibility 0s linear 0.8s,
+        filter 0.3s ease;
+}
+
+.projetoCategoriaContainer:has(.img-container:hover) .balaoInformacoesContainer,
+.balaoInformacoesContainer:hover {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: 
+        opacity 0.3s ease 0.8s, 
+        visibility 0s linear 0.8s,
+        filter 0.3s ease;
+}
+
+.balaoInformacoesContainer:hover {
+    filter: brightness(1.1);
+}
+
+.balaoInformacoesContainer::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -9.7px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--corFundoAuxiliar);
+    border-top: 3px solid var(--backgroundQuarto);
+    border-right: 3px solid var(--backgroundQuarto);
+    transform: translateY(-50%) rotate(45deg);
+    box-shadow: 3px -3px 0 0 var(--backgroundPrimario);
+    z-index: 1; 
+    border-top-right-radius: 2px;
+}
+
+.balaoInformacoesContainer::before {
+    content: '';
+    position: absolute;
+    top: -10px; 
+    bottom: -10px;
+    left: -10px;
+    right: -20px; 
+    z-index: -1;
+}
+
+.balaoInformacoesContainer img {
+    width: 95%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+.balaoInformacoesContainerTitulo {
+    font-size: 18px;
+}
+
+.balaoInformacoesContainerDescricao {
+    font-size: 14px;
+    color: var(--corBorda);
+}
+
+.balaoInformacoesContainerInformacoes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.balaoInformacoesContainerCategoria {
+    border: 1px solid var(--backgroundTerciario);
+    background-color: var(--backgroundTerciario);
+    color: var(--corBorda);
+    font-size: 13.5px;
+    width: fit-content;
+    padding: 2px 5px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.balaoInformacoesContainerBtnVerProjeto {
+    width: 55%;
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid var(--backgroundPrimario);
+    border-radius: 3px;
+    color: var(--backgroundPrimario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.balaoInformacoesContainerBtnVerProjeto:hover {
     cursor: pointer;
 }
