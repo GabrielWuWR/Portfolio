@@ -4310,6 +4310,11 @@ export const frases = [
         "quote": "You don't have any power or technique like Jack Johnson or Jack Dempsey either! You know any boxer names? You know I'm right? If you're an American, of course you know! If you say you don't know, or something, I won't forgive you! I will never forgive you! And even if you know them, I still won't forgive you, though!"
     },
     {
+        "anime": "The Greatest Estate Dev",
+        "character": "Lloyd Frontera",
+        "quote": "if you think money can't buy happiness , means you don't have enough money" 
+    },
+    {
         "anime": "Bleach",
         "character": "Rukia Kuchiki",
         "quote": "You can see me? Rather, you kicked me..."

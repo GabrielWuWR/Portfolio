@@ -171,6 +171,40 @@ main {
     color: var(--corAuxiliar);
 }
 
+.categoriaMenuContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+}
+
+.categoriaMenuNome {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--corTexto);
+}
+
+.categoriaMenuItens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+.categoriaMenuItens a {
+    color: var(--backgroundTerciario);
+}
+
+.categoriaMenuItens a:hover {
+    color: var(--corAuxiliar);
+    text-decoration: underline;
+}
+
+.categoriaMenuItem {
+    flex: 0 0 calc(50% - 5px); 
+    box-sizing: border-box;
+}
+
 .cabecalhos {
     width: 100%;
 }
